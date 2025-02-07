@@ -41,11 +41,14 @@ const Navbar = () => {
   return (
     <div
       className={
-        "fixed z-10 top-0 flex w-full h-[60px] items-center justify-between box-border pr-10 pl-10 bg-background"
+        "fixed z-20 top-0 flex w-full h-[60px] items-center justify-between box-border pr-10 pl-10 bg-background"
       }
     >
-      <p className={"font-bold text-3xl font-[AuroRumpthut] w-fit"}>
+      <p className={"font-bold text-3xl font-[AuroRumpthut] w-fit hidden md:grid"}>
         Sean Dahan
+      </p>
+      <p className={"font-bold text-3xl font-[AuroRumpthut] w-fit md:hidden"}>
+        S D
       </p>
       <div className="flex h-5 items-center space-x-4 text-sm">
         <div>
@@ -55,8 +58,8 @@ const Navbar = () => {
             </Button>
           ))}
         </div>
-        <Separator orientation="vertical" />
-        <div>
+        <Separator className="hidden md:grid" orientation="vertical" />
+        <div className="hidden md:flex">
           {links.map(({ url, logo: Logo }) => (
             <Button asChild variant={"link"}>
               <a target="_blank" rel="noreferrer" href={url}>
