@@ -101,11 +101,11 @@ const Texts: React.FC<Pick<MorphingTextProps, "texts">> = ({ texts }) => {
   return (
     <>
       <span
-        className="absolute inset-x-0 top-0 m-auto inline-block w-full"
+        className="absolute inset-x-0 top-0 m-auto inline-block"
         ref={text1Ref}
       />
       <span
-        className="absolute inset-x-0 top-0 m-auto inline-block w-full"
+        className="absolute inset-x-0 top-0 m-auto inline-block"
         ref={text2Ref}
       />
     </>
@@ -138,7 +138,7 @@ export const MorphingText: React.FC<MorphingTextProps> = ({
   className,
 }) => (
   <div
-    className={cn("font-bold [filter:url(#threshold)_blur(.5px)]", className)}
+    className={cn("font-bold [filter:url(#threshold)_blur(.4px)]", className)}
   >
     <Texts texts={texts} />
     <SvgFilters />

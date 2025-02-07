@@ -1,21 +1,35 @@
 @import "tailwindcss";
-
+@tailwind utilities;
 @plugin "tailwindcss-animate";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-
 @font-face {
-  font-family: "AuroRumpthut";   /*Can be any text*/
+  font-family: "AuroRumpthut"; /*Can be any text*/
   src: local("AuroRumpthut"),
     url("./fonts/Auro Rumpthut.ttf") format("truetype");
 }
 
+/* * {
+  overflow: hidden;
+}
+*/
 :root {
-    font-family: 'Roboto-Slab';
+  font-family: "Roboto-Slab";
+  /* overflow: hidden; */
 }
 
-
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
 
 :root {
   --background: hsl(0 0% 100%);
@@ -43,6 +57,7 @@
   --chart-4: hsl(43 74% 66%);
   --chart-5: hsl(27 87% 67%);
   --radius: 0.6rem;
+  --subtext: oklch(0.551 0.027 264.364);
 }
 
 .dark {
