@@ -1,25 +1,34 @@
-import { MorphingText } from "@/components/magicui/morphing-text";
-import { InteractiveHoverButton } from "../magicui/interactive-hover-button";
+import { MorphingText } from "../magicui/morphing-text";
+import { SparklesText } from "../magicui/sparkles-text";
+import { WordRotate } from "../magicui/word-rotate";
 
+const texts = [
+  "FullStack Developer",
+  "Athlete",
+  "Backend Developer",
+  "Coffee Junkey",
+];
 const WelcomeCard = () => {
   return (
-    <div id={"welcome"} className="flex flex-col gap-5">
-      <div className={"text-3xl text-left"}>
-        Hello, I'm Sean &<br /> I make designs that are&nbsp;&nbsp;
-        <MorphingText
-          className={"inline text-5xl w-[100px]"}
-          texts={["Creative.", "Interesting.", "Artistic.", "Fascinating."]}
+    <div id={"welcome"} className="h-full flex flex-col justify-evenly items-center">
+      <div className="grid place-items-center">
+        <div className="text-(--subtext)">I'm a</div>
+        <div></div>
+        <WordRotate
+          className="relative mx-auto w-full max-w-screen-md text-center font-sans text-[40pt] font-bold leading-none [filter:url(#threshold)_blur(0.6px)]  lg:text-[6rem] h-[200px]"
+          words={texts}
         />
+        {/* <MorphingText
+        className="h-[200px]"
+        texts={texts}
+      /> */}
       </div>
-      <p className="text-wrap w-[300px] text-(--subtext)">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate,
-        nostrum cumque nulla debitis eligendi, obcaecati recusandae assumenda
-        quisquam accusantium esse ex velit quaerat pariatur excepturi autem
-        molestiae accusamus deserunt tempore?
-      </p>
-      <InteractiveHoverButton className={"w-fit h-fit"}>
-        Hit me up !
-      </InteractiveHoverButton>
+      <div className="grid place-items-center">
+        <p className="text-wrap w-[300px] text-(--subtext)">
+          I make people's ideas come to life.
+        </p>
+        <SparklesText text={"What about yours ?"} />
+      </div>
     </div>
   );
 };

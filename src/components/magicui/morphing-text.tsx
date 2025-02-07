@@ -5,7 +5,7 @@ import { useCallback, useEffect, useRef } from "react";
 import { cn } from "@/lib/utils";
 
 const morphTime = 1.5;
-const cooldownTime = 0.5;
+const cooldownTime = 1.5;
 
 const useMorphingText = (texts: string[]) => {
   const textIndexRef = useRef(0);
@@ -101,11 +101,11 @@ const Texts: React.FC<Pick<MorphingTextProps, "texts">> = ({ texts }) => {
   return (
     <>
       <span
-        className="absolute inset-x-0 top-0 m-auto inline-block"
+        className="absolute inset-x-0 top-0 m-auto inline-block w-full"
         ref={text1Ref}
       />
       <span
-        className="absolute inset-x-0 top-0 m-auto inline-block"
+        className="absolute inset-x-0 top-0 m-auto inline-block w-full"
         ref={text2Ref}
       />
     </>
@@ -138,7 +138,10 @@ export const MorphingText: React.FC<MorphingTextProps> = ({
   className,
 }) => (
   <div
-    className={cn("font-bold [filter:url(#threshold)_blur(.4px)]", className)}
+    className={cn(
+      "relative mx-auto w-full max-w-screen-md text-center font-sans text-[40pt] font-bold leading-none [filter:url(#threshold)_blur(0.6px)]  lg:text-[6rem]",
+      className
+    )}
   >
     <Texts texts={texts} />
     <SvgFilters />

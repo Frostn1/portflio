@@ -19,7 +19,7 @@ const links = [
 const navs = [
   {
     name: "Home",
-    id: "app",
+    id: "home",
   },
   {
     name: "Projects",
