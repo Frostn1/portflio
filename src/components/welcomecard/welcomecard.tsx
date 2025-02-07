@@ -1,13 +1,4 @@
 import { MorphingText } from "@/components/magicui/morphing-text";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { MagicCard } from "@/components/magicui/magic-card";
 
 const WelcomeCard = () => {
   return (
