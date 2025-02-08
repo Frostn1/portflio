@@ -47,7 +47,7 @@ const SingleProject: React.FC<SingleProjectProps> = ({
           ))}
         </div>
       </div>
-      <div>
+      <div className="relative">
         <Safari
           mode="simple"
           url="das-track.web.app"
@@ -55,7 +55,7 @@ const SingleProject: React.FC<SingleProjectProps> = ({
           className="size-full"
         />
         <Iphone15Pro
-          className="w-20 top-[-1.5%] md:w-40 md:top-[31%] absolute h-fit "
+          className="w-20 top-[-1.5%] md:w-40 md:top-[29%] absolute h-fit "
           src={mobileImage}
         />
       </div>

@@ -1,7 +1,7 @@
 const About = () => {
   return (
     <div id={"about"}>
-      <h1 className="text-3xl w-fit flex flex-col gap-1">About</h1>
+      <h1 className="text-3xl flex flex-col gap-1">About</h1>
       <p className="text-wrap md:w-md text-(--subtext)">
         I'm Sean Dahan, a young and ambitious individual.
         <br />

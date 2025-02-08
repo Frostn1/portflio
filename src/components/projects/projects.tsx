@@ -11,12 +11,23 @@ const porjects = [
     desktopImage: "dastrack-desktop.png",
     mobileImage: "dastrack-mobile.jpg",
   },
+  {
+    name: "Shahar Dahan",
+    description:
+      "Landging page for training coach. Displays services socials and quick contact info.",
+    githubLink: "https://github.com/Frostn1/shahardahan-portflio",
+    websiteLink: "shahardahan.com",
+    tags: ["tailwind", "react", "typescript"],
+    desktopImage: "shahar-desktop.png",
+    mobileImage: "shahar-mobile.png",
+  },
 ];
 
 const Projects = () => {
   return (
     <div id={"projects"}>
-      <h1 className="text-3xl w-fit flex flex-col gap-1">My Projects</h1>
+      <h1 className="text-3xl w-fit">My Projects</h1>
+      <div className="flex flex-col gap-20">
       {porjects.map((_project) => (
         <SingleProject
           name={_project.name}
@@ -28,6 +39,7 @@ const Projects = () => {
           websiteLink={_project.websiteLink}
         />
       ))}
+      </div>
     </div>
   );
 };

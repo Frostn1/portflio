@@ -6,6 +6,7 @@ import Page from "@/components/page/page";
 import Projects from "@/components/projects/projects";
 import Footer from "@/components/footer/footer";
 import { Ripple } from "@/components/magicui/ripple";
+import { BlurFade } from "./components/magicui/blur-fade";
 
 const pages = [
   {
@@ -24,9 +25,16 @@ function App() {
       <Ripple className="fixed" />
 
       <div className={"h-screen no-scrollbar scroll-auto"}>
-        {pages.map(({ El, id }) => (
+        {pages.map(({ El, id }, idx) => (
           <Page id={id}>
-            <El />
+            <BlurFade
+              className="relative h-[calc(100%-60px)]"
+              key={id}
+              delay={0.25 + idx * 0.05}
+              inView
+            >
+              <El />
+            </BlurFade>
           </Page>
         ))}
         <Footer />
