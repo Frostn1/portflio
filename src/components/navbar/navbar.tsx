@@ -2,6 +2,19 @@ import GithubLogo from "@/assets/github.svg?react";
 import LinkedinLogo from "@/assets/linkedin.svg?react";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "../ui/dialog";
+import { Label } from "../ui/label";
+import { Input } from "../ui/input";
+import { Textarea } from "../ui/textarea";
+import { useState } from "react";
+import ContactForm from "../contactform/contactform";
 
 const links = [
   {
@@ -32,19 +45,26 @@ const navs = [
 ];
 
 const Navbar = () => {
+  
+
   function handleScroll(id: string) {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
   }
+
   return (
     <div
       className={
         "fixed z-20 top-0 flex w-full h-[60px] items-center justify-between box-border pr-10 pl-10 bg-background"
       }
     >
-      <p className={"font-bold text-3xl font-[AuroRumpthut] w-fit hidden md:grid"}>
+      <p
+        className={
+          "font-bold text-3xl font-[AuroRumpthut] w-fit hidden md:grid"
+        }
+      >
         Sean Dahan
       </p>
       <p className={"font-bold text-3xl font-[AuroRumpthut] w-fit md:hidden"}>
@@ -57,6 +77,12 @@ const Navbar = () => {
               <p>{name}</p>
             </Button>
           ))}
+          <Dialog>
+            <DialogTrigger asChild>
+              <Button variant={"link"}>Contact</Button>
+            </DialogTrigger>
+            <ContactForm/>
+          </Dialog>
         </div>
         <Separator className="hidden md:grid" orientation="vertical" />
         <div className="hidden md:flex">
