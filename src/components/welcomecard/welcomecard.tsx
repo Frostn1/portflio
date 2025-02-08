@@ -8,15 +8,14 @@ const WelcomeCard = () => {
       id={"welcome"}
       className="h-full flex flex-col justify-evenly items-center"
     >
-      <div className="grid place-items-center gap-10">
+      <div className="grid place-items-center gap-10 text-center">
         <div className="text-5xl">
           I make people's software ideas come to life.
         </div>
-        <div className="text-(--sub-header) text-wrap w-sm">
-          Using innovative design, clean and effecient code and vast technology
-          stack.
-          <br />I strive for perfection and create personal tailored branding to
-          what you represent.
+        <div className="text-(--sub-header) text-wrap md:w-sm text-left">
+          Using innovative design, clean and efficient code and a vast
+          technology stack, I strive for perfection and create personal tailored
+          branding to what you represent.
         </div>
       </div>
 

@@ -2,8 +2,6 @@ import GithubLogo from "@/assets/github.svg?react";
 import LinkedinLogo from "@/assets/linkedin.svg?react";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import ContactForm from "../contactform/contactform";
-import { Dialog, DialogTrigger } from "../ui/dialog";
 
 const links = [
   {
@@ -57,19 +55,13 @@ const Navbar = () => {
       <p className={"font-bold text-3xl font-[AuroRumpthut] w-fit md:hidden"}>
         S D
       </p>
-      <div className="flex h-5 items-center space-x-4 text-sm">
+      <div className="flex h-5 items-center md:space-x-4 text-xs md:text-sm">
         <div>
           {navs.map(({ name, id }) => (
             <Button onClick={() => handleScroll(id)} variant={"link"}>
               <p>{name}</p>
             </Button>
           ))}
-          <Dialog>
-            <DialogTrigger asChild>
-              <Button variant={"link"}>Contact</Button>
-            </DialogTrigger>
-            <ContactForm />
-          </Dialog>
         </div>
         <Separator className="hidden md:grid" orientation="vertical" />
         <div className="hidden md:flex">

@@ -21,7 +21,7 @@ function App() {
     <div id={"app"} className={"h-full w-full "}>
       <ScrollProgress className="top-[60px]" />
       <Navbar />
-      <Ripple className="fixed"/>
+      <Ripple className="fixed" />
 
       <div className={"h-screen no-scrollbar scroll-auto"}>
         {pages.map(({ El, id }) => (

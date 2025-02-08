@@ -1,6 +1,7 @@
 import React from "react";
 import { Safari } from "../magicui/safari";
 import { Button } from "../ui/button";
+import Iphone15Pro from "../magicui/iphone-15-pro";
 
 interface SingleProjectProps {
   name: string;
@@ -9,6 +10,7 @@ interface SingleProjectProps {
   tags: string[];
   desktopImage: string;
   mobileImage: string;
+  websiteLink: string;
 }
 
 const SingleProject: React.FC<SingleProjectProps> = ({
@@ -17,10 +19,11 @@ const SingleProject: React.FC<SingleProjectProps> = ({
   githubLink,
   tags,
   desktopImage,
-  mobileImage: _mobileImage,
+  mobileImage,
+  websiteLink,
 }) => {
   return (
-    <div className="grid grid-cols-2">
+    <div className="flex flex-col gap-5 md:grid grid-cols-2">
       <div className="flex flex-col gap-5 ">
         <div className="flex flex-row items-baseline gap-3">
           <span className="text-2xl bold">{name}</span>
@@ -29,8 +32,13 @@ const SingleProject: React.FC<SingleProjectProps> = ({
               GitHub
             </a>
           </Button>
+          <Button variant="link" className="text-(--subtext) p-0 h-fit">
+            <a href={websiteLink} rel="noreferrer" target="_blank">
+              Site
+            </a>
+          </Button>
         </div>
-        <div className="text-wrap text-(--subtext) w-md">{description}</div>
+        <div className="text-wrap text-(--subtext)  md:w-md">{description}</div>
         <div className="flex flex-row gap-3">
           {tags.map((tag) => (
             <div className={"border rounded-3xl text-sm p-1 pl-3 pr-3 "}>
@@ -46,7 +54,10 @@ const SingleProject: React.FC<SingleProjectProps> = ({
           imageSrc={desktopImage}
           className="size-full"
         />
-        {/* <Iphone15Pro className="size-full" /> */}
+        <Iphone15Pro
+          className="w-20 top-[-1.5%] md:w-40 md:top-[31%] absolute h-fit "
+          src={mobileImage}
+        />
       </div>
     </div>
   );

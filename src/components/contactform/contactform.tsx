@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { Button } from "../ui/button";
 import {
-    DialogContent,
-    DialogDescription,
-    DialogHeader,
-    DialogTitle,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
 } from "../ui/dialog";
 import { Input } from "../ui/input";
 import { Label } from "../ui/label";
@@ -14,7 +14,7 @@ const ContactForm = () => {
   const [body, setBody] = useState("");
   const [name, setName] = useState("");
   return (
-    <DialogContent className="sm:max-w-[425px]">
+    <DialogContent className="sm:max-w-[300px] md:max-w-[425px]">
       <DialogHeader>
         <DialogTitle>Let's work together !</DialogTitle>
         <DialogDescription>
@@ -29,8 +29,10 @@ const ContactForm = () => {
           <Input
             onChange={(e) => setName(e.target.value)}
             id="name"
-            value="John Doe"
+            placeholder="John Doe"
+            value={name}
             className="col-span-3"
+            required
           />
         </div>
         <div className="flex flex-col gap-5">
@@ -38,13 +40,17 @@ const ContactForm = () => {
             Description
           </Label>
           <Textarea
+            required
+            id="idea-text"
             onChange={(e) => setBody(e.target.value)}
-            placeholder="Type your idea here."
+            placeholder="What is your next big idea ?"
           />
         </div>
       </div>
-      <Button variant={"ghost"} className="align-right w-fit">
-        <a href={`mailto:hello@seandahan.com?subject=${name}&body=${body}`}>Email me</a>
+      <Button variant={"default"} className="align-right w-fit">
+        <a href={`mailto:hello@seandahan.com?subject=${name}&body=${body}`}>
+          Email me
+        </a>
       </Button>
     </DialogContent>
   );
