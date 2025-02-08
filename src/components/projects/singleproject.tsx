@@ -1,7 +1,6 @@
 import React from "react";
-import { Button } from "../ui/button";
 import { Safari } from "../magicui/safari";
-import Iphone15Pro from "../magicui/iphone-15-pro";
+import { Button } from "../ui/button";
 
 interface SingleProjectProps {
   name: string;
@@ -18,7 +17,7 @@ const SingleProject: React.FC<SingleProjectProps> = ({
   githubLink,
   tags,
   desktopImage,
-  mobileImage,
+  mobileImage: _mobileImage,
 }) => {
   return (
     <div className="grid grid-cols-2">

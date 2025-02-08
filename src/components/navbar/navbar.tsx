@@ -2,19 +2,8 @@ import GithubLogo from "@/assets/github.svg?react";
 import LinkedinLogo from "@/assets/linkedin.svg?react";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "../ui/dialog";
-import { Label } from "../ui/label";
-import { Input } from "../ui/input";
-import { Textarea } from "../ui/textarea";
-import { useState } from "react";
 import ContactForm from "../contactform/contactform";
+import { Dialog, DialogTrigger } from "../ui/dialog";
 
 const links = [
   {
@@ -45,8 +34,6 @@ const navs = [
 ];
 
 const Navbar = () => {
-  
-
   function handleScroll(id: string) {
     const element = document.getElementById(id);
     if (element) {
@@ -81,7 +68,7 @@ const Navbar = () => {
             <DialogTrigger asChild>
               <Button variant={"link"}>Contact</Button>
             </DialogTrigger>
-            <ContactForm/>
+            <ContactForm />
           </Dialog>
         </div>
         <Separator className="hidden md:grid" orientation="vertical" />

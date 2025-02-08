@@ -1,16 +1,7 @@
 import ContactForm from "../contactform/contactform";
-import { AuroraText } from "../magicui/aurora-text";
 import { InteractiveHoverButton } from "../magicui/interactive-hover-button";
-import { SparklesText } from "../magicui/sparkles-text";
-import { WordRotate } from "../magicui/word-rotate";
 import { Dialog, DialogTrigger } from "../ui/dialog";
 
-const texts = [
-  "FullStack Developer",
-  "Athlete",
-  "Backend Developer",
-  "Coffee Junkey",
-];
 const WelcomeCard = () => {
   return (
     <div
@@ -41,5 +32,6 @@ const WelcomeCard = () => {
     </div>
   );
 };
+9;
 
 export default WelcomeCard;

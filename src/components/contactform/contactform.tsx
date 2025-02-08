@@ -44,7 +44,7 @@ const ContactForm = () => {
         </div>
       </div>
       <Button variant={"ghost"} className="align-right w-fit">
-        <a href={`mailto:hello@seandahan.com?body=${body}`}>Email me</a>
+        <a href={`mailto:hello@seandahan.com?subject=${name}&body=${body}`}>Email me</a>
       </Button>
     </DialogContent>
   );
