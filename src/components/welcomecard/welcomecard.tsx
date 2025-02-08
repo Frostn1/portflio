@@ -20,13 +20,13 @@ const WelcomeCard = () => {
           words={texts}
         />
         {/* <MorphingText
-        className="h-[200px]"
+        className=""
         texts={texts}
       /> */}
       </div>
       <div className="grid place-items-center">
         <p className="text-wrap w-[300px] text-(--subtext)">
-          I make people's ideas come to life.
+          I make people's software ideas come to life.
         </p>
         <SparklesText className="z-10" text={"What about yours ?"} />
       </div>
