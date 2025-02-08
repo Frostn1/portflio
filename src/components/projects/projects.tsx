@@ -6,7 +6,7 @@ const porjects = [
     description:
       "Connects riders over the world with track owners lets them see closest track to them, see opening hours and more.",
     githubLink: "https://github.com/frostn1",
-    websiteLink: "das-track.web.app",
+    websiteLink: "https://das-track.web.app",
     tags: ["express", "react", "typescript"],
     desktopImage: "dastrack-desktop.png",
     mobileImage: "dastrack-mobile.jpg",
@@ -16,7 +16,7 @@ const porjects = [
     description:
       "Landging page for training coach. Displays services socials and quick contact info.",
     githubLink: "https://github.com/Frostn1/shahardahan-portflio",
-    websiteLink: "shahardahan.com",
+    websiteLink: "https://shahardahan.com",
     tags: ["tailwind", "react", "typescript"],
     desktopImage: "shahar-desktop.png",
     mobileImage: "shahar-mobile.png",
