@@ -6,13 +6,13 @@ const WelcomeCard = () => {
   return (
     <div
       id={"welcome"}
-      className="h-full flex flex-col justify-evenly items-center"
+      className="h-full flex flex-col justify-between items-center gap-60 p-20"
     >
       <div className="grid place-items-center gap-10 text-center">
         <div className="text-5xl">
           I make people's software ideas come to life.
         </div>
-        <div className="text-(--sub-header) text-wrap md:w-sm text-left">
+        <div className="text-(--sub-header) text-wrap md:w-sm lg:w-md lg:text-xl text-left">
           Using innovative design, clean and efficient code and a vast
           technology stack, I strive for perfection and create personal tailored
           branding to what you represent.

@@ -7,6 +7,7 @@ import Projects from "@/components/projects/projects";
 import Footer from "@/components/footer/footer";
 import { Ripple } from "@/components/magicui/ripple";
 import { BlurFade } from "./components/magicui/blur-fade";
+import { DotPattern } from "./components/magicui/dot-pattern";
 
 const pages = [
   {
@@ -22,7 +23,7 @@ function App() {
     <div id={"app"} className={"h-full w-full "}>
       <ScrollProgress className="top-[60px]" />
       <Navbar />
-      <Ripple className="fixed" />
+      <DotPattern className="fixed" glow={false}/>
 
       <div className={"h-screen no-scrollbar scroll-auto"}>
         {pages.map(({ El, id }, idx) => (
