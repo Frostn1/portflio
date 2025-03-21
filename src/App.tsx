@@ -5,7 +5,6 @@ import WelcomeCard from "@/components/welcomecard/welcomecard";
 import Page from "@/components/page/page";
 import Projects from "@/components/projects/projects";
 import Footer from "@/components/footer/footer";
-import { Ripple } from "@/components/magicui/ripple";
 import { BlurFade } from "./components/magicui/blur-fade";
 import { DotPattern } from "./components/magicui/dot-pattern";
 

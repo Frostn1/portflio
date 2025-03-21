@@ -6,11 +6,11 @@ import Iphone15Pro from "../magicui/iphone-15-pro";
 interface SingleProjectProps {
   name: string;
   description: string;
-  githubLink: string;
+  githubLink?: string;
   tags: string[];
   desktopImage: string;
-  mobileImage: string;
-  websiteLink: string;
+  mobileImage?: string;
+  websiteLink?: string;
 }
 
 const SingleProject: React.FC<SingleProjectProps> = ({
