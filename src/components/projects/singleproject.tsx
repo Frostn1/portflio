@@ -23,7 +23,7 @@ const SingleProject: React.FC<SingleProjectProps> = ({
   websiteLink,
 }) => {
   return (
-    <div className="flex flex-col gap-5 md:grid grid-cols-2">
+    <div className="gap-5 grid lg:grid-cols-2">
       <div className="flex flex-col gap-5 ">
         <div className="flex flex-row items-baseline gap-3">
           <span className="text-2xl bold">{name}</span>
@@ -53,16 +53,16 @@ const SingleProject: React.FC<SingleProjectProps> = ({
           ))}
         </div>
       </div>
-      <div className="relative">
+      <div className="relative h-[150px] xs:h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px] w-fit bg-red-100">
         <Safari
           mode="simple"
           url={websiteLink}
           imageSrc={desktopImage}
-          className="size-full"
+          className="bottom-0 h-[100%] left-0 w-fit absolute"
         />
         {mobileImage ? (
           <Iphone15Pro
-            className="w-20 top-[-1.5%] md:w-40 md:top-[29%] absolute h-fit "
+            className="absolute h-[75%] md:h-[50%] w-fit left-0 bottom-0"
             src={mobileImage}
           />
         ) : null}

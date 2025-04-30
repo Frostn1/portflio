@@ -22,8 +22,7 @@ function App() {
     <div id={"app"} className={"h-full w-full "}>
       <ScrollProgress className="top-[60px]" />
       <Navbar />
-      <DotPattern className="fixed" glow={false}/>
-
+      <DotPattern className="fixed" glow={false} />
       <div className={"h-screen no-scrollbar scroll-auto"}>
         {pages.map(({ El, id }, idx) => (
           <Page id={id}>
